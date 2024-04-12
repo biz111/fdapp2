@@ -1,7 +1,7 @@
 FROM node:14 AS frontend-build
 WORKDIR /usr/src/app
 COPY ./ ./client
-RUN cd client && npm install && npm run dev
+RUN cd client && npm install && npm run build
 
 # Use official nginx image as the base image
 FROM nginx:latest
