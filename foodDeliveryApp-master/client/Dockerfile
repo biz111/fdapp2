@@ -7,7 +7,7 @@ RUN cd client && npm install && npm run build
 FROM nginx:latest
 
 # Copy the build output to replace the default nginx contents.
-COPY --from=frontend-build /usr/src/app/client/dist/client/ /usr/share/nginx/html
+COPY --from=frontend-build /usr/src/app/client/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Expose port 5000
