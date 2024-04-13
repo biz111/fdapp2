@@ -1,5 +1,5 @@
 export async function sendOrderData(orderData) {
-    const response = await fetch('http://localhost:3000/orders',
+    const response = await fetch('http://192.168.55.45:3000/orders',
         {
             method: 'POST',
             body: JSON.stringify({ orderData }),

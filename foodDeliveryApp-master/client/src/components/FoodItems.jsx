@@ -6,7 +6,7 @@ export default function FoodItems({ onSelectItem }) {
 
     useEffect(() => {
         isFetching(true);
-        fetch('http://localhost:3000/meals')
+        fetch('http://192.168.55.45:3000/meals')
             .then((response) => {
                 return response.json();
             })
