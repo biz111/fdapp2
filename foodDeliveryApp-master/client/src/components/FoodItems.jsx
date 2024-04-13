@@ -20,7 +20,7 @@ export default function FoodItems({ onSelectItem }) {
         <section>
             <div className="meal-item">
                 {!fetching && (<ul id="meals">{availableMeals.map((meal) => (<li key={meal.id} className="meal-item">
-                    <img src={`http://localhost:3000/${meal.image}`}></img><h3>{meal.name}</h3>
+                    <img src={`http://192.168.55.45:3000/${meal.image}`}></img><h3>{meal.name}</h3>
                     <p className="meal-item-price">{meal.price}</p>
                     <p className="meal-item-description">{meal.description}</p>
                     <button className="button" onClick={() => onSelectItem(meal)}>Add to Cart</button>
